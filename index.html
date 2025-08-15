@@ -501,5 +501,51 @@
             }
         });
 </script> 
+<script>
+var message1 = &#39;عفوا المحتوي محمي من التلاعب والسرقة .. جميع الحقوق محفوظة لـ Tax Law App 2023 - 2024 !&#39;;
+
+function showAlert(message) {
+    Swal.fire({
+        icon: &#39;error&#39;,
+        title: &#39;Tax Law App&#39;,
+        text: message,
+        confirmButtonText: &#39;إغلاق الرسالة&#39;
+    });
+}
+
+function clickIE4() {
+    if (2 == event.button) {
+        showAlert(message1);
+        return false;
+    }
+}
+
+function clickNS4(e) {
+    if ((document.layers || (document.getElementById &amp;&amp; !document.all)) &amp;&amp; (2 == e.which || 3 == e.which)) {
+        showAlert(message1);
+        return false;
+    }
+}
+
+document.oncontextmenu = function () {
+    showAlert(message1);
+    return false;
+};
+
+document.onkeydown = function (e) {
+    if (
+        123 == e.keyCode ||
+        (e.ctrlKey &amp;&amp; 73 == e.keyCode) ||
+        (e.ctrlKey &amp;&amp; 67 == e.keyCode) ||
+        (e.ctrlKey &amp;&amp; 74 == e.keyCode) ||
+        (e.ctrlKey &amp;&amp; 80 == e.keyCode) ||
+        (e.ctrlKey &amp;&amp; 85 == e.keyCode) ||
+        (e.ctrlKey &amp;&amp; 83 == e.keyCode)
+    ) {
+        showAlert(message1);
+        return false;
+    }
+};
+</script>    
 </body>
 </html>
